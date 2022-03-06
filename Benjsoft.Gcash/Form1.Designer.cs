@@ -58,7 +58,6 @@ namespace Benjsoft.Gcash
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.ClaimToggleButton = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -378,7 +377,6 @@ namespace Benjsoft.Gcash
             // 
             // panelControl2
             // 
-            this.panelControl2.Controls.Add(this.ClaimToggleButton);
             this.panelControl2.Controls.Add(this.simpleButton1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl2.Location = new System.Drawing.Point(0, 607);
@@ -386,16 +384,6 @@ namespace Benjsoft.Gcash
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1120, 53);
             this.panelControl2.TabIndex = 1;
-            // 
-            // ClaimToggleButton
-            // 
-            this.ClaimToggleButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ClaimToggleButton.ImageOptions.Image")));
-            this.ClaimToggleButton.Location = new System.Drawing.Point(132, 8);
-            this.ClaimToggleButton.Name = "ClaimToggleButton";
-            this.ClaimToggleButton.Size = new System.Drawing.Size(138, 32);
-            this.ClaimToggleButton.TabIndex = 1;
-            this.ClaimToggleButton.Text = "Claimed Toggle";
-            this.ClaimToggleButton.Click += new System.EventHandler(this.ClaimToggleButton_Click);
             // 
             // simpleButton1
             // 
@@ -436,6 +424,7 @@ namespace Benjsoft.Gcash
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
+            this.gridView1.CellValueChanging += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView1_CellValueChanging);
             // 
             // TransactionDate
             // 
@@ -514,7 +503,6 @@ namespace Benjsoft.Gcash
             this.TransactionClaimed.FieldName = "Claimed";
             this.TransactionClaimed.MinWidth = 27;
             this.TransactionClaimed.Name = "TransactionClaimed";
-            this.TransactionClaimed.OptionsColumn.ReadOnly = true;
             this.TransactionClaimed.Visible = true;
             this.TransactionClaimed.VisibleIndex = 6;
             this.TransactionClaimed.Width = 100;
@@ -620,7 +608,6 @@ namespace Benjsoft.Gcash
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.LookUpEdit FullName;
-        private DevExpress.XtraEditors.SimpleButton ClaimToggleButton;
     }
 }
 

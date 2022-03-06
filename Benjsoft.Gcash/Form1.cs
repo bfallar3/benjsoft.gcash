@@ -217,14 +217,18 @@ namespace Benjsoft.Gcash
             this.MobileNumber.Text = this.repo.GetMobileByName(this.FullName.Text);
         }
 
-        private void ClaimToggleButton_Click(object sender, EventArgs e)
+        private void gridView1_CellValueChanging(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-            var currentItem = this.currencyManager.Current as Transaction;
-            if (currentItem != null)
+            if(e.Column.Name == "TransactionClaimed")
             {
-                repo.CashoutClaimed(currentItem.Id, !currentItem.Claimed);
-                this.BindData();
+                var claimedChecked = (bool)e.Value;
+                var currentItem = this.currencyManager.Current as Transaction;
+                if (currentItem != null)
+                {
+                    repo.CashoutClaimed(currentItem.Id, claimedChecked);
+                }
             }
+
         }
     }
 }

@@ -102,3 +102,4 @@ C:\Users\bfall\source\repos\Benjsoft.Gcash\Benjsoft.Gcash\bin\Debug\ja\DevExpres
 C:\Users\bfall\source\repos\Benjsoft.Gcash\Benjsoft.Gcash\bin\Debug\ru\DevExpress.Office.v21.2.Core.resources.dll
 C:\Users\bfall\source\repos\Benjsoft.Gcash\Benjsoft.Gcash\obj\Debug\Benjsoft.Gcash.exe.licenses
 C:\Users\bfall\source\repos\Benjsoft.Gcash\Benjsoft.Gcash\obj\Debug\Benjsoft.Gcash.DailyReport.resources
+C:\Users\bfall\source\repos\Benjsoft.Gcash\Benjsoft.Gcash\obj\Debug\Benjsoft.Gcash.csproj.AssemblyReference.cache
