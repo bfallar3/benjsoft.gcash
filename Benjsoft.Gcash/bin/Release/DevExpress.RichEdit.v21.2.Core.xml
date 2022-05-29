@@ -6372,7 +6372,7 @@
       <summary>
         <para>Specifies an application used to modify the document.</para>
       </summary>
-      <value>The application name. The default is “DevExpress Office File API/<span class="macro" data-macro-template="xx.x.x">21.2.6</span>.0”.</value>
+      <value>The application name. The default is “DevExpress Office File API/<span class="macro" data-macro-template="xx.x.x">21.2.3</span>.0”.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.AppVersion">
       <summary>
@@ -7214,11 +7214,6 @@
       <param name="password">A password to encrypt the document.</param>
       <param name="type">The encryption type.</param>
     </member>
-    <member name="M:DevExpress.XtraRichEdit.API.Native.EncryptionSettings.Dispose">
-      <summary>
-        <para>Disposes of the EncryptionSettings object.</para>
-      </summary>
-    </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.EncryptionSettings.Password">
       <summary>
         <para>Specifies a password to encrypt the document.</para>
@@ -7894,8 +7889,8 @@
       <summary>
         <para>Creates a hyperlink for the specified document range and adds it to the collection.</para>
       </summary>
-      <param name="range">A range associated with the hyperlink.</param>
-      <returns>The created hyperlink.</returns>
+      <param name="range">A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentRange"/> object specifying a range associated with the hyperlink.</param>
+      <returns>A <see cref="T:DevExpress.XtraRichEdit.API.Native.Hyperlink"/> interface exposing the created hyperlink.</returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.HyperlinkCollection.Remove(DevExpress.XtraRichEdit.API.Native.Hyperlink)">
       <summary>
@@ -10126,14 +10121,14 @@
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.Paragraph">
       <summary>
-        <para>A document paragraph.</para>
+        <para>Represents a single paragraph in a document.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Paragraph.Alignment">
       <summary>
-        <para>Gets or sets the paragraph’s text alignment.</para>
+        <para>Gets or sets text alignment within a paragraph.</para>
       </summary>
-      <value>Indicates a paragraph alignment.</value>
+      <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.ParagraphAlignment"/> enumeration value.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Paragraph.BackColor">
       <summary>
@@ -10145,8 +10140,8 @@
       <summary>
         <para>Starts modifying tab stops in a paragraph.</para>
       </summary>
-      <param name="onlyOwnTabs">true to set tab stops for the target paragraph only, disregarding style; false to merge tab stops which are set for the paragraph style and for the individual paragraph.</param>
-      <returns>A collection of paragraph tab stops.</returns>
+      <param name="onlyOwnTabs">true to get tab stops set for the current paragraph only, disregarding style; otherwise, if set to false, merges tab stops which are set for the paragraph style and for the individual paragraph.</param>
+      <returns>A <see cref="T:DevExpress.XtraRichEdit.API.Native.TabInfoCollection"/> object containing information about tab stops.</returns>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Paragraph.ContextualSpacing">
       <summary>
@@ -10156,7 +10151,7 @@
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.Paragraph.EndUpdateTabs(DevExpress.XtraRichEdit.API.Native.TabInfoCollection)">
       <summary>
-        <para>Finalizes modifications of tab stops for the paragraph.</para>
+        <para>Finalizes modifications of tab stops for the current paragraph.</para>
       </summary>
       <param name="tabs">A <see cref="T:DevExpress.XtraRichEdit.API.Native.TabInfoCollection"/> collection containing information about tab stops.</param>
     </member>
@@ -10334,7 +10329,7 @@
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.ParagraphAlignment">
       <summary>
-        <para>Specifies a paragraph alignment.</para>
+        <para>Specifies text alignment within a paragraph.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.ParagraphAlignment.Center">
@@ -10501,7 +10496,7 @@
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.ParagraphProperties">
       <summary>
-        <para>Contains paragraph properties.</para>
+        <para>Represents paragraph properties.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ParagraphProperties.Style">
@@ -10512,7 +10507,7 @@
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.ParagraphPropertiesBase">
       <summary>
-        <para>Serves as the base for the <see cref="T:DevExpress.XtraRichEdit.API.Native.ParagraphProperties"/> interface, obtaining paragraph properties.</para>
+        <para>Serves as the base for the <see cref="T:DevExpress.XtraRichEdit.API.Native.ParagraphProperties"/> interface, providing access to paragraph properties.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ParagraphPropertiesBase.Alignment">
@@ -10547,7 +10542,7 @@
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ParagraphPropertiesBase.FirstLineIndentType">
       <summary>
-        <para>Gets or sets how a paragraph’s first line is indented.</para>
+        <para>Gets or sets a value specifying whether and how a paragraph’s first line is indented.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.ParagraphFirstLineIndent"/> enumeration value, specifying the first line indent or null (Nothing in Visual Basic), for a mixture of paragraphs with different indent types.</value>
     </member>
@@ -10567,31 +10562,31 @@
       <summary>
         <para>Gets or sets a paragraph’s left indent.</para>
       </summary>
-      <value>The left indent measured in <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> units or null (Nothing in Visual Basic) for a mixture of paragraphs with different indents.</value>
+      <value>A <see cref="T:System.Single"/> value representing the left indent measured in <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> units or null (Nothing in Visual Basic) for a mixture of paragraphs with different indents.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ParagraphPropertiesBase.LineSpacing">
       <summary>
         <para>Gets or sets a line spacing value.</para>
       </summary>
-      <value>Line spacing measured in <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> units or null (Nothing in Visual Basic) for a mixture of paragraphs with different line spacings.</value>
+      <value>A <see cref="T:System.Single"/> value representing line spacing measured in <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> units or null (Nothing in Visual Basic) for a mixture of paragraphs with different line spacings.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ParagraphPropertiesBase.LineSpacingMultiplier">
       <summary>
-        <para>Gets or sets the multiplier used to calculate the line spacing value.</para>
+        <para>Gets or sets the multiplier which is used to calculate the line spacing value.</para>
       </summary>
-      <value>Line spacing multiplier or null (Nothing in Visual Basic), for a mixture of paragraphs with different line spacings.</value>
+      <value>A <see cref="T:System.Single"/> value representing the line spacing multiplier or null (Nothing in Visual Basic), for a mixture of paragraphs with different line spacings.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ParagraphPropertiesBase.LineSpacingType">
       <summary>
-        <para>Gets or sets the spacing type between a paragraph’s lines.</para>
+        <para>Gets or sets a value which determines the spacing between paragraph’s lines.</para>
       </summary>
-      <value>Indicates the line spacing type.</value>
+      <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.ParagraphLineSpacing"/> enumeration value representing the line spacing type.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ParagraphPropertiesBase.OutlineLevel">
       <summary>
         <para>Gets or sets the paragraph’s outline level.</para>
       </summary>
-      <value>A level number, or null for a mixture of values.</value>
+      <value>An integer specifying the level number, or null for a mixture of values.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ParagraphPropertiesBase.PageBreakBefore">
       <summary>
@@ -10614,7 +10609,7 @@
       <summary>
         <para>Gets or sets the paragraph’s right indent.</para>
       </summary>
-      <value>The right indent measured in <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> units or null (Nothing in Visual Basic) for a mixture of paragraphs with different indents.</value>
+      <value>A <see cref="T:System.Single"/> value representing the right indent measured in <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> units or null (Nothing in Visual Basic) for a mixture of paragraphs with different indents.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ParagraphPropertiesBase.RightToLeft">
       <summary>
@@ -10624,15 +10619,15 @@
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ParagraphPropertiesBase.SpacingAfter">
       <summary>
-        <para>Gets or sets the spacing after a paragraph.</para>
+        <para>Gets or sets the spacing after the current paragraph.</para>
       </summary>
-      <value>The spacing after the paragraph measured in <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> units, or null (Nothing in Visual Basic), for a mixture of paragraphs with different spacings.</value>
+      <value>A <see cref="T:System.Single"/> value representing the spacing after the paragraph, measured in <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> units or null (Nothing in Visual Basic), for a mixture of paragraphs with different spacings.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ParagraphPropertiesBase.SpacingBefore">
       <summary>
-        <para>Gets or sets the spacing before a paragraph.</para>
+        <para>Gets or sets the spacing before the current paragraph.</para>
       </summary>
-      <value>The spacing before the paragraph measured in <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> units, or null (Nothing in Visual Basic), for a mixture of paragraphs with different spacings.</value>
+      <value>A <see cref="T:System.Single"/> value representing the spacing before the paragraph, measured in <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> units or null (Nothing in Visual Basic), for a mixture of paragraphs with different spacings.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ParagraphPropertiesBase.SuppressHyphenation">
       <summary>
@@ -10759,10 +10754,10 @@
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.ParagraphPropertiesWithTabs.BeginUpdateTabs(System.Boolean)">
       <summary>
-        <para>Starts modifying paragraph tab stops.</para>
+        <para>Starts modifying tab stops in a paragraph.</para>
       </summary>
-      <param name="onlyOwnTabs">true to set tab stops for the target paragraph only, disregarding style; false to merge tab stops which are set for the paragraph style and for the individual paragraph.</param>
-      <returns>A collection of paragraph tab stops.</returns>
+      <param name="onlyOwnTabs">true to get tab stops set for the current paragraph only, disregarding style; otherwise, if set to false, merges tab stops which are set for the paragraph style and for the individual paragraph.</param>
+      <returns>A <see cref="T:DevExpress.XtraRichEdit.API.Native.TabInfoCollection"/> object containing information about tab stops.</returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.ParagraphPropertiesWithTabs.EndUpdateTabs(DevExpress.XtraRichEdit.API.Native.TabInfoCollection)">
       <summary>
@@ -11402,7 +11397,7 @@
       <summary>
         <para>Gets the name of the application used to modify the document.</para>
       </summary>
-      <value>The application’s name. The default is “DevExpress Office File API/<span class="macro" data-macro-template="xx.x.x">21.2.6</span>.0”.</value>
+      <value>The application’s name. The default is “DevExpress Office File API/<span class="macro" data-macro-template="xx.x.x">21.2.3</span>.0”.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyDocumentBuiltInProperties.AppVersion">
       <summary>
@@ -15465,9 +15460,9 @@
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.SubDocument.EndUpdateParagraphs(DevExpress.XtraRichEdit.API.Native.ParagraphProperties)">
       <summary>
-        <para>Finalizes the modification of paragraph formatting after the BeginUpdateParagraphs method call.</para>
+        <para>Finalizes the modification of paragraph formatting after calling the <see cref="M:DevExpress.XtraRichEdit.API.Native.SubDocument.BeginUpdateParagraphs(DevExpress.XtraRichEdit.API.Native.DocumentRange)"/> method.</para>
       </summary>
-      <param name="properties">Contains paragraph formatting options.</param>
+      <param name="properties">A <see cref="T:DevExpress.XtraRichEdit.API.Native.ParagraphProperties"/> object representing paragraph formatting.</param>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.SubDocument.EndUpdateRangePermissions(DevExpress.XtraRichEdit.API.Native.RangePermissionCollection)">
       <summary>
@@ -16865,9 +16860,9 @@
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.TableCell.ContentRange">
       <summary>
-        <para>Gets the document range that contains the cell content (excluding the table paragraph mark).</para>
+        <para>Gets the document range occupied by the cell content.</para>
       </summary>
-      <value>The range with the cell content.</value>
+      <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentRange"/> that is the target range.</value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.TableCell.Delete">
       <summary>
@@ -16930,9 +16925,9 @@
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.TableCell.Range">
       <summary>
-        <para>Gets a document range that contains the cell content, including the table paragraph mark.</para>
+        <para>Gets a document range occupied by the current cell.</para>
       </summary>
-      <value>A range with the cell content.</value>
+      <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentRange"/> occupied by a cell.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.TableCell.RightPadding">
       <summary>
@@ -17334,31 +17329,31 @@
       <summary>
         <para>Inserts a blank table with the specified number of rows and columns at the specified position.</para>
       </summary>
-      <param name="pos">A position at which a table is inserted.</param>
-      <param name="rowCount">A number of table rows.</param>
-      <param name="columnCount">A number of table columns.</param>
-      <returns>The created table.</returns>
+      <param name="pos">A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentPosition"/> at which a table is inserted.</param>
+      <param name="rowCount">An integer specifying the number of rows in a new table.</param>
+      <param name="columnCount">An integer specifying the number of columns in a new table.</param>
+      <returns>A <see cref="T:DevExpress.XtraRichEdit.API.Native.Table"/> interface specifying the newly created table.</returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.TableCollection.Create(DevExpress.XtraRichEdit.API.Native.DocumentPosition,System.Int32,System.Int32,DevExpress.XtraRichEdit.API.Native.AutoFitBehaviorType)">
       <summary>
         <para>Inserts a blank table with the specified number of rows and columns at the specified position.</para>
       </summary>
       <param name="pos">A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentPosition"/> at which a table is inserted.</param>
-      <param name="rowCount">A number of table rows.</param>
-      <param name="columnCount">A number of table columns.</param>
-      <param name="autoFitBehavior">Indicates the AutoFit layout algorithm type.</param>
-      <returns>The newly created table.</returns>
+      <param name="rowCount">An integer specifying the number of rows in a new table.</param>
+      <param name="columnCount">An integer specifying the number of columns in a new table.</param>
+      <param name="autoFitBehavior">An <see cref="T:DevExpress.XtraRichEdit.API.Native.AutoFitBehaviorType"/> enumeration value specifying how the column widths are calculated.</param>
+      <returns>A <see cref="T:DevExpress.XtraRichEdit.API.Native.Table"/> interface specifying the newly created table.</returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.TableCollection.Create(DevExpress.XtraRichEdit.API.Native.DocumentPosition,System.Int32,System.Int32,DevExpress.XtraRichEdit.API.Native.AutoFitBehaviorType,System.Int32)">
       <summary>
         <para>Inserts a blank table with the specified number of rows and columns at the specified position.</para>
       </summary>
       <param name="pos">A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentPosition"/> at which a table is inserted.</param>
-      <param name="rowCount">A  number of table rows.</param>
-      <param name="columnCount">A number of table columns.</param>
-      <param name="autoFitBehavior">Indicates the AutoFit layout algorithm type.</param>
-      <param name="fixedColumnWidths">The column width if the autoFitBehavior parameter is set to FixedColumnWidth.</param>
-      <returns>The newly created table.</returns>
+      <param name="rowCount">An integer specifying the number of rows in a new table.</param>
+      <param name="columnCount">An integer specifying the number of columns in a new table.</param>
+      <param name="autoFitBehavior">An <see cref="T:DevExpress.XtraRichEdit.API.Native.AutoFitBehaviorType"/> enumeration value specifying how the column widths are calculated.</param>
+      <param name="fixedColumnWidths">An integer specifying the column width if the autoFitBehavior parameter is set to <see cref="F:DevExpress.XtraRichEdit.API.Native.AutoFitBehaviorType.FixedColumnWidth"/>.</param>
+      <returns>A <see cref="T:DevExpress.XtraRichEdit.API.Native.Table"/> interface specifying the newly created table.</returns>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.TableCollection.First">
       <summary>
@@ -17405,8 +17400,8 @@
       <summary>
         <para>Creates a table style for the specified table elements and adds it to the collection.</para>
       </summary>
-      <param name="condition">Indicates a table element to which a style can be applied.</param>
-      <returns>An object that contains style properties.</returns>
+      <param name="condition">A <see cref="T:DevExpress.XtraRichEdit.API.Native.ConditionalTableStyleFormattingTypes"/> enumeration value that specifies table elements to which a style can be applied.</param>
+      <returns>A <see cref="T:DevExpress.XtraRichEdit.API.Native.TableConditionalStyle"/> object.</returns>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.TableConditionalStyleProperties.Item(DevExpress.XtraRichEdit.API.Native.ConditionalTableStyleFormattingTypes)">
       <summary>
@@ -17954,14 +17949,14 @@
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.TableStyle">
       <summary>
-        <para>A table style.</para>
+        <para>A single style that can be applied to a table.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.TableStyle.ConditionalStyleProperties">
       <summary>
-        <para>Obtains options for specific table elements (first cell, first row, etc.).</para>
+        <para>Provides access to the container object that holds conditional styles and enables you to retrieve or create them.</para>
       </summary>
-      <value>An object that contains conditional style properties.</value>
+      <value>An object implementing the <see cref="T:DevExpress.XtraRichEdit.API.Native.TableConditionalStyleProperties"/> interface.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.TableStyle.IsDeleted">
       <summary>
@@ -17989,14 +17984,14 @@
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.TableStyleCollection">
       <summary>
-        <para>A collection of table styles.</para>
+        <para>A TableStyle objects collection that contains the table styles in a document.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.TableStyleCollection.Add(DevExpress.XtraRichEdit.API.Native.TableStyle)">
       <summary>
-        <para>Add a style to the style collection.</para>
+        <para>Add a style to the collection of styles in the current document.</para>
       </summary>
-      <param name="style">A table style to add to the collection.</param>
+      <param name="style">A <see cref="T:DevExpress.XtraRichEdit.API.Native.TableStyle"/> class instance that is a table style.</param>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.TableStyleCollection.CreateNew">
       <summary>
@@ -23232,10 +23227,6 @@
       </summary>
       <value>An XtraRichEditStringId enumeration value, identifying the resource string.</value>
     </member>
-    <member name="P:DevExpress.XtraRichEdit.Commands.InsertTableElementMenuCommand.Id">
-      <summary />
-      <value></value>
-    </member>
     <member name="P:DevExpress.XtraRichEdit.Commands.InsertTableElementMenuCommand.MenuCaptionStringId">
       <summary>
         <para>Gets a string resource identifier of a menu caption corresponding to <see cref="T:DevExpress.XtraRichEdit.Commands.InsertTableElementMenuCommand"/>.</para>
@@ -25960,10 +25951,6 @@
       </summary>
       <value>A command ID.</value>
     </member>
-    <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertTableElement">
-      <summary />
-      <value></value>
-    </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertTableInner">
       <summary>
         <para>For internal use.</para>
@@ -26439,12 +26426,6 @@
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.RtlIncreaseIndent">
       <summary>
         <para>RtlIncrementIndentCommand ID.</para>
-      </summary>
-      <value>A command ID.</value>
-    </member>
-    <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.RtlShowNumberingListForm">
-      <summary>
-        <para>RtlShowNumberingListForm ID.</para>
       </summary>
       <value>A command ID.</value>
     </member>
@@ -29821,50 +29802,33 @@
       </summary>
       <param name="control">An object implementing the DevExpress.XtraRichEdit.IRichEditControl interface, specifying the command owner.</param>
     </member>
-    <member name="M:DevExpress.XtraRichEdit.Commands.ShowNumberingListFormCommand.UpdateUIState(DevExpress.Utils.Commands.ICommandUIState)">
-      <summary>
-        <para>Updates the command state and applies restrictions.</para>
-      </summary>
-      <param name="state">An object that defines the command state.</param>
-    </member>
-    <member name="T:DevExpress.XtraRichEdit.Commands.ShowNumberingListFormCommandBase">
-      <summary>
-        <para>A base class for ShowNumberingListFormCommand and RtlShowNumberingListFormCommand classes.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraRichEdit.Commands.ShowNumberingListFormCommandBase.#ctor(DevExpress.XtraRichEdit.IRichEditControl)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraRichEdit.Commands.ShowNumberingListFormCommandBase"/> class with specified settings.</para>
-      </summary>
-      <param name="control">An object implementing the DevExpress.XtraRichEdit.IRichEditControl interface, specifying the command owner.</param>
-    </member>
-    <member name="P:DevExpress.XtraRichEdit.Commands.ShowNumberingListFormCommandBase.DescriptionStringId">
+    <member name="P:DevExpress.XtraRichEdit.Commands.ShowNumberingListFormCommand.DescriptionStringId">
       <summary>
         <para>Gets a string resource identifier of a command description.</para>
       </summary>
       <value>An XtraRichEditStringId enumeration value, identifying the resource string.</value>
     </member>
-    <member name="M:DevExpress.XtraRichEdit.Commands.ShowNumberingListFormCommandBase.ForceExecute(DevExpress.Utils.Commands.ICommandUIState)">
+    <member name="M:DevExpress.XtraRichEdit.Commands.ShowNumberingListFormCommand.ForceExecute(DevExpress.Utils.Commands.ICommandUIState)">
       <summary>
         <para>Executes the command specifying the UI state explicitly.</para>
       </summary>
       <param name="state">An object which implements the <see cref="T:DevExpress.Utils.Commands.ICommandUIState"/> interface.</param>
     </member>
-    <member name="P:DevExpress.XtraRichEdit.Commands.ShowNumberingListFormCommandBase.Id">
+    <member name="P:DevExpress.XtraRichEdit.Commands.ShowNumberingListFormCommand.Id">
       <summary>
-        <para>Returns the ID of the ShowNumberingListFormCommandBase.</para>
+        <para>Gets the ID of the <see cref="T:DevExpress.XtraRichEdit.Commands.ShowNumberingListFormCommand"/>.</para>
       </summary>
-      <value>A RichEditCommandId member, identifying the command.</value>
+      <value>A <see cref="T:DevExpress.XtraRichEdit.Commands.RichEditCommandId"/> member, identifying the command.</value>
     </member>
-    <member name="P:DevExpress.XtraRichEdit.Commands.ShowNumberingListFormCommandBase.ImageName">
+    <member name="P:DevExpress.XtraRichEdit.Commands.ShowNumberingListFormCommand.ImageName">
       <summary>
-        <para>Gets the name of the resource image corresponding to ShowNumberingListFormCommandBase.</para>
+        <para>Gets the name of the resource image corresponding to <see cref="T:DevExpress.XtraRichEdit.Commands.ShowNumberingListFormCommand"/>.</para>
       </summary>
-      <value>The name of an image contained in resources.</value>
+      <value>A <see cref="T:System.String"/> value, specifying the name of an image contained in resources.</value>
     </member>
-    <member name="P:DevExpress.XtraRichEdit.Commands.ShowNumberingListFormCommandBase.MenuCaptionStringId">
+    <member name="P:DevExpress.XtraRichEdit.Commands.ShowNumberingListFormCommand.MenuCaptionStringId">
       <summary>
-        <para>Gets a string resource identifier of a menu caption corresponding to ShowNumberingListFormCommandBase.</para>
+        <para>Gets a string resource identifier of a menu caption corresponding to <see cref="T:DevExpress.XtraRichEdit.Commands.ShowNumberingListFormCommand"/>.</para>
       </summary>
       <value>A XtraRichEditStringId enumeration value, identifying the resource string.</value>
     </member>
@@ -37348,9 +37312,6 @@
         <para>Occurs after the document is successfully exported.</para>
       </summary>
     </member>
-    <member name="E:DevExpress.XtraRichEdit.IRichEditDocumentServer.BeforeEncodingDetection">
-      <summary />
-    </member>
     <member name="E:DevExpress.XtraRichEdit.IRichEditDocumentServer.BeforeExport">
       <summary>
         <para>Occurs before the document is saved (exported to a certain format).</para>
@@ -39227,9 +39188,6 @@
       <summary>
         <para>Occurs after the document is successfully exported.</para>
       </summary>
-    </member>
-    <member name="E:DevExpress.XtraRichEdit.RichEditDocumentServer.BeforeEncodingDetection">
-      <summary />
     </member>
     <member name="E:DevExpress.XtraRichEdit.RichEditDocumentServer.BeforeExport">
       <summary>

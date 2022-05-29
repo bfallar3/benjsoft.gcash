@@ -113,8 +113,7 @@ namespace Benjsoft.Gcash
 
         private void Amount_Leave(object sender, EventArgs e)
         {
-            double amount;
-            if (double.TryParse(this.Amount.Text, out amount))
+            if (double.TryParse(this.Amount.Text, out double amount))
             {
                 this.Amount.Text = amount.ToString("N2");
             }
@@ -161,8 +160,7 @@ namespace Benjsoft.Gcash
 
         private void ChargeOrFee_Leave(object sender, EventArgs e)
         {
-            double amount;
-            if (double.TryParse(this.ChargeOrFee.Text, out amount))
+            if (double.TryParse(this.ChargeOrFee.Text, out double amount))
             {
                 this.ChargeOrFee.Text = amount.ToString("N2");
             }
@@ -181,8 +179,7 @@ namespace Benjsoft.Gcash
 
         private void RemoveTransaction_Click(object sender, EventArgs e)
         {
-            var currentItem = this.currencyManager.Current as Transaction;
-            if (currentItem != null)
+            if (this.currencyManager.Current is Transaction currentItem)
             {
                 var response = MessageBox.Show($"Are you sure to delete the selected transaction for {currentItem.Number}?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
                 if (response == DialogResult.Yes)
@@ -222,8 +219,7 @@ namespace Benjsoft.Gcash
             if(e.Column.Name == "TransactionClaimed")
             {
                 var claimedChecked = (bool)e.Value;
-                var currentItem = this.currencyManager.Current as Transaction;
-                if (currentItem != null)
+                if (this.currencyManager.Current is Transaction currentItem)
                 {
                     repo.CashoutClaimed(currentItem.Id, claimedChecked);
                 }

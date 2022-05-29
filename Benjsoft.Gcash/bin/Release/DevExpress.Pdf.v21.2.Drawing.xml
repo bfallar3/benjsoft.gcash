@@ -466,54 +466,54 @@
     </member>
     <member name="M:DevExpress.Pdf.PdfGraphics.DrawImage(System.Byte[],System.Drawing.PointF)">
       <summary>
-        <para>Draws the specified image data at the specified point.</para>
+        <para>Draws the specified image using the byte array data at the specified location.</para>
       </summary>
-      <param name="data">An array of bytes with image data.</param>
-      <param name="location">A point in world coordinate system where you can draw an image.</param>
+      <param name="data">An array of bytes representing an image to draw.</param>
+      <param name="location">A <see cref="T:System.Drawing.PointF"/> structure that represents the image location.</param>
     </member>
     <member name="M:DevExpress.Pdf.PdfGraphics.DrawImage(System.Byte[],System.Drawing.RectangleF)">
       <summary>
-        <para>Draws an image data in the specified page rectangle. The image is scaled to fit the rectangle.</para>
+        <para>Draws an image using an array of bytes representing image data and the image bounds.</para>
       </summary>
-      <param name="data">An image to draw.</param>
-      <param name="bounds">A page area in world coordinate system where you can draw an image.</param>
+      <param name="data">An array of bytes representing an image to draw.</param>
+      <param name="bounds">A <see cref="T:System.Drawing.RectangleF"/> structure that specifies the bounds used to draw an image.</param>
     </member>
     <member name="M:DevExpress.Pdf.PdfGraphics.DrawImage(System.Drawing.Image,System.Drawing.PointF)">
       <summary>
-        <para>Draws the specified image in its original size at the specified page point.</para>
+        <para>Draws the specified image in its original size at the specified location.</para>
       </summary>
-      <param name="image">An image to draw.</param>
-      <param name="location">A point in world coordinate system where you can position an image.</param>
+      <param name="image">A <see cref="T:System.Drawing.Image"/> object that specifies the image to draw.</param>
+      <param name="location">A <see cref="T:System.Drawing.PointF"/> structure that represents the image location.</param>
     </member>
     <member name="M:DevExpress.Pdf.PdfGraphics.DrawImage(System.Drawing.Image,System.Drawing.RectangleF)">
       <summary>
-        <para>Draws an image in the specified page rectangle. The image is scaled to fit this rectangle.</para>
+        <para>Draws an image using the specified image bounds.</para>
       </summary>
-      <param name="image">An image to draw.</param>
-      <param name="bounds">A page area in world coordinate system where you want to draw an image.</param>
+      <param name="image">An <see cref="T:System.Drawing.Image"/> object that specifies the image to draw.</param>
+      <param name="bounds">A <see cref="T:System.Drawing.RectangleF"/> structure that specifies the image bounds.</param>
     </member>
     <member name="M:DevExpress.Pdf.PdfGraphics.DrawImage(System.Drawing.Image,System.Drawing.RectangleF,System.Drawing.RectangleF,System.Drawing.GraphicsUnit)">
       <summary>
-        <para>Draws the specified image part in a page rectangle.</para>
+        <para>Draws the portion of the specified Image at the specified location in the specified size.</para>
       </summary>
-      <param name="image">An image to draw.</param>
-      <param name="destRect">A page rectangle in world coordinate system where you can draw an image. The image portion is scaled to fit the rectangle.</param>
-      <param name="srcRect">A portion of the image to draw.</param>
-      <param name="srcUnit">Indicates the measurement units used by the srcRect parameter.</param>
+      <param name="image">An <see cref="T:System.Drawing.Image"/> object that specifies the image to draw.</param>
+      <param name="destRect">A <see cref="T:System.Drawing.RectangleF"/> structure that specifies the location and size of the drawn image. The image is scaled to fit the rectangle.</param>
+      <param name="srcRect">A <see cref="T:System.Drawing.RectangleF"/> structure that specifies the portion of the image object to draw.</param>
+      <param name="srcUnit">A <see cref="T:System.Drawing.GraphicsUnit"/> enumeration that is the units of measure used by the srcRect parameter.</param>
     </member>
     <member name="M:DevExpress.Pdf.PdfGraphics.DrawImage(System.IO.Stream,System.Drawing.PointF)">
       <summary>
-        <para>Draws an image from a stream at the specified page point.</para>
+        <para>Draws an image at the specified location using the stream data.</para>
       </summary>
-      <param name="data">A stream with image data.</param>
-      <param name="location">A point on the page in world coordinate system where you can draw an image.</param>
+      <param name="data">A <see cref="T:System.IO.Stream"/> class descendant, specifying the stream with the image data.</param>
+      <param name="location">A <see cref="T:System.Drawing.PointF"/> structure that represents the image location.</param>
     </member>
     <member name="M:DevExpress.Pdf.PdfGraphics.DrawImage(System.IO.Stream,System.Drawing.RectangleF)">
       <summary>
-        <para>Draws an image from a stream in the specified page rectangle. The image is scaled to fit the rectangle.</para>
+        <para>Draws an image with the bounds and stream.</para>
       </summary>
-      <param name="data">A stream with image data.</param>
-      <param name="bounds">A page area in world coordinate system where you can draw an image.</param>
+      <param name="data">A <see cref="T:System.IO.Stream"/> class descendant, specifying the stream with the image data.</param>
+      <param name="bounds">A <see cref="T:System.Drawing.RectangleF"/> structure that specifies the bounds used to draw an image.</param>
     </member>
     <member name="M:DevExpress.Pdf.PdfGraphics.DrawLine(System.Drawing.Pen,System.Single,System.Single,System.Single,System.Single)">
       <summary>
@@ -1422,11 +1422,6 @@
     <member name="T:DevExpress.Pdf.PdfRenderingEngine">
       <summary>
         <para>Lists values used to specify the rendering engine.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Pdf.PdfRenderingEngine.Default">
-      <summary>
-        <para>Default rendering engine.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Pdf.PdfRenderingEngine.DirectX">

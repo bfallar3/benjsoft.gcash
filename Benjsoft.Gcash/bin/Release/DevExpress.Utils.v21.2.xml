@@ -1127,16 +1127,16 @@
     </member>
     <member name="M:DevExpress.Skins.SkinManager.RegisterAssembly(System.Reflection.Assembly)">
       <summary>
-        <para>Registers the specified assembly that contains custom skins. Registered skins cannot be applied to splash screens; use the <see cref="M:DevExpress.XtraEditors.WindowsFormsSettings.RegisterUserSkins(System.Reflection.Assembly)"/> method instead.</para>
+        <para>Registers the specified assembly that contains custom skins.</para>
       </summary>
       <param name="assembly">An assembly that should be registered.</param>
-      <returns>true if the assembly is successfully registered; otherwise, false.</returns>
+      <returns>true, if the assembly is successfully registered; othrewise, false.</returns>
     </member>
     <member name="M:DevExpress.Skins.SkinManager.RegisterSkin(DevExpress.Skins.SkinCreator)">
       <summary>
-        <para>Registers the specified skin stored as a BLOB for runtime use. The registered skin cannot be applied to splash screens; use the <see cref="M:DevExpress.XtraEditors.WindowsFormsSettings.RegisterUserSkin(DevExpress.Skins.Info.SkinBlobXmlCreator)"/> method instead.</para>
+        <para>Registers the specified skin stored as a BLOB for runtime use.</para>
       </summary>
-      <param name="creator">An object that contains information on the target BLOB skin.</param>
+      <param name="creator">An object that provides information on the target BLOB skin.</param>
     </member>
     <member name="M:DevExpress.Skins.SkinManager.RegisterSkinAssembly(System.Reflection.Assembly)">
       <summary>
@@ -1147,7 +1147,7 @@
     </member>
     <member name="M:DevExpress.Skins.SkinManager.RegisterSkinPatch(System.IO.Stream,System.Boolean)">
       <summary>
-        <para>Loads a skin patch from the stream. Patches loaded by this method overload are not applied to Splash Screens, use other overloads instead.</para>
+        <para>Loads a skin patch from the stream.</para>
       </summary>
       <param name="skinPatchStream">The stream to load a patch from.</param>
       <param name="registerSkinPatchPalettes">true to register palettes from the patch, false to leave palettes of the default skin.</param>
@@ -4030,7 +4030,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.Utils.ContextItemCollectionOptions.HoverStateOpacity">
       <summary>
-        <para>Gets or sets opacity for hovered context items.</para>
+        <para>Gets or sets opacity for hovered conteext items.</para>
       </summary>
       <value>A value between 0 and 1 that determines opacity; 1 is for “opaque”, 0 is for “transparent”.</value>
     </member>
@@ -6654,31 +6654,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       </summary>
       <value>true if the application currently uses the DirectX Hardware Acceleration; otherwise, false.</value>
     </member>
-    <member name="T:DevExpress.Utils.Drawing.HyperlinkClickMode">
-      <summary>
-        <para>Contains values that specify how users can activate hyperlinks embedded in control headers.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Utils.Drawing.HyperlinkClickMode.Click">
-      <summary>
-        <para>A hyperlink is activated on a mouse click.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Utils.Drawing.HyperlinkClickMode.CtrlClick">
-      <summary>
-        <para>A hyperlink is activated on a mouse click when the CTRL key is pressed down.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Utils.Drawing.HyperlinkClickMode.Default">
-      <summary>
-        <para>The same as the None option.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Utils.Drawing.HyperlinkClickMode.None">
-      <summary>
-        <para>Do not activate a hyperlink on a mouse pointer hover or click event.</para>
-      </summary>
-    </member>
     <member name="T:DevExpress.Utils.Drawing.ImageLayoutMode">
       <summary>
         <para>Specifies how an image can be aligned within another object.</para>
@@ -6967,7 +6942,7 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
     </member>
     <member name="F:DevExpress.Utils.EditorShowMode.Default">
       <summary>
-        <para>The mode is not specified explicitly. The actual mode depends on the control and its settings. See remarks in the following topic for more information: EditorShowMode Enum.</para>
+        <para>The mode is not specified explicitly. The actual mode depends on the control and its settings. See remarks in the following topic for more information: <see cref="T:DevExpress.Utils.EditorShowMode"/>.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Utils.EditorShowMode.MouseDown">
@@ -10844,7 +10819,7 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
     </member>
     <member name="P:DevExpress.Utils.TextOptions.HotkeyPrefix">
       <summary>
-        <para>Gets or sets whether to underline characters that are preceded with an ampersand symbol (&amp;). This option is supported by a set of controls.</para>
+        <para>Gets or sets whether or not to underline characters that are preceded with an ampersand symbol (&amp;). This option is supported by a set of controls.</para>
       </summary>
       <value>A value that specifies how to interpret an ampersand character (&amp;) in text.</value>
     </member>
@@ -17899,18 +17874,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     <member name="P:DevExpress.XtraEditors.WindowsFormsSettings.PrioritizeIListSourceInDiagramDataBinding">
       <summary />
       <value></value>
-    </member>
-    <member name="M:DevExpress.XtraEditors.WindowsFormsSettings.RegisterUserSkin(DevExpress.Skins.Info.SkinBlobXmlCreator)">
-      <summary>
-        <para>Registers the specified skin stored as a BLOB for runtime use. This method replaces the previously used <see cref="M:DevExpress.Skins.SkinManager.RegisterSkin(DevExpress.Skins.SkinCreator)"/> method that did not affect splash screens and required that you call the additional <see cref="M:DevExpress.XtraSplashScreen.SplashScreenManager.RegisterUserSkins(System.Reflection.Assembly)"/> method.</para>
-      </summary>
-      <param name="creator">An object that contains information on the target BLOB skin.</param>
-    </member>
-    <member name="M:DevExpress.XtraEditors.WindowsFormsSettings.RegisterUserSkins(System.Reflection.Assembly)">
-      <summary>
-        <para>Registers all skins from the target assembly, allowing you and your users to apply them. This method replaces the previously used SkinManager.Default.RegisterAssembly method that did not affect splash screens and required that you call the additional <see cref="M:DevExpress.XtraSplashScreen.SplashScreenManager.RegisterUserSkins(System.Reflection.Assembly)"/> method.</para>
-      </summary>
-      <param name="assembly">Custom skin storage.</param>
     </member>
     <member name="P:DevExpress.XtraEditors.WindowsFormsSettings.RightToLeft">
       <summary>

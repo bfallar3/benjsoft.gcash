@@ -159,24 +159,24 @@ namespace Benjsoft.Gcash
             // TransactionDateTime
             // 
             this.TransactionDateTime.EditValue = null;
-            this.TransactionDateTime.Location = new System.Drawing.Point(130, 12);
+            this.TransactionDateTime.Location = new System.Drawing.Point(128, 12);
             this.TransactionDateTime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TransactionDateTime.Name = "TransactionDateTime";
             this.TransactionDateTime.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.TransactionDateTime.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.TransactionDateTime.Size = new System.Drawing.Size(256, 26);
+            this.TransactionDateTime.Size = new System.Drawing.Size(258, 26);
             this.TransactionDateTime.StyleController = this.layoutControl1;
             this.TransactionDateTime.TabIndex = 12;
             // 
             // ChargeOrFee
             // 
             this.ChargeOrFee.EditValue = "0.00";
-            this.ChargeOrFee.Location = new System.Drawing.Point(879, 42);
+            this.ChargeOrFee.Location = new System.Drawing.Point(877, 42);
             this.ChargeOrFee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ChargeOrFee.Name = "ChargeOrFee";
-            this.ChargeOrFee.Size = new System.Drawing.Size(137, 26);
+            this.ChargeOrFee.Size = new System.Drawing.Size(139, 26);
             this.ChargeOrFee.StyleController = this.layoutControl1;
             this.ChargeOrFee.TabIndex = 11;
             this.ChargeOrFee.Enter += new System.EventHandler(this.ChargeOrFee_Enter);
@@ -184,6 +184,7 @@ namespace Benjsoft.Gcash
             // 
             // IsClaimed
             // 
+            this.IsClaimed.EditValue = true;
             this.IsClaimed.Location = new System.Drawing.Point(1020, 42);
             this.IsClaimed.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.IsClaimed.Name = "IsClaimed";
@@ -195,7 +196,7 @@ namespace Benjsoft.Gcash
             // 
             // TransType
             // 
-            this.TransType.Location = new System.Drawing.Point(508, 12);
+            this.TransType.Location = new System.Drawing.Point(506, 12);
             this.TransType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TransType.Name = "TransType";
             this.TransType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -206,44 +207,44 @@ namespace Benjsoft.Gcash
             "CashOut",
             "Bills",
             "BankTransfer"});
-            this.TransType.Size = new System.Drawing.Size(249, 26);
+            this.TransType.Size = new System.Drawing.Size(251, 26);
             this.TransType.StyleController = this.layoutControl1;
             this.TransType.TabIndex = 9;
             // 
             // Amount
             // 
-            this.Amount.Location = new System.Drawing.Point(879, 12);
+            this.Amount.Location = new System.Drawing.Point(877, 12);
             this.Amount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Amount.Name = "Amount";
             this.Amount.Properties.BeepOnError = true;
-            this.Amount.Size = new System.Drawing.Size(225, 26);
+            this.Amount.Size = new System.Drawing.Size(227, 26);
             this.Amount.StyleController = this.layoutControl1;
             this.Amount.TabIndex = 8;
             this.Amount.Leave += new System.EventHandler(this.Amount_Leave);
             // 
             // MobileNumber
             // 
-            this.MobileNumber.Location = new System.Drawing.Point(508, 42);
+            this.MobileNumber.Location = new System.Drawing.Point(506, 42);
             this.MobileNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MobileNumber.Name = "MobileNumber";
-            this.MobileNumber.Size = new System.Drawing.Size(249, 26);
+            this.MobileNumber.Size = new System.Drawing.Size(251, 26);
             this.MobileNumber.StyleController = this.layoutControl1;
             this.MobileNumber.TabIndex = 7;
             // 
             // Remarks
             // 
             this.Remarks.EditValue = "";
-            this.Remarks.Location = new System.Drawing.Point(130, 72);
+            this.Remarks.Location = new System.Drawing.Point(128, 72);
             this.Remarks.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Remarks.Name = "Remarks";
             this.Remarks.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.Remarks.Size = new System.Drawing.Size(627, 26);
+            this.Remarks.Size = new System.Drawing.Size(629, 26);
             this.Remarks.StyleController = this.layoutControl1;
             this.Remarks.TabIndex = 6;
             // 
             // FullName
             // 
-            this.FullName.Location = new System.Drawing.Point(130, 42);
+            this.FullName.Location = new System.Drawing.Point(128, 42);
             this.FullName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FullName.Name = "FullName";
             this.FullName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -251,7 +252,7 @@ namespace Benjsoft.Gcash
             this.FullName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.FullName.Properties.NullText = "";
             this.FullName.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.FullName.Size = new System.Drawing.Size(256, 26);
+            this.FullName.Size = new System.Drawing.Size(258, 26);
             this.FullName.StyleController = this.layoutControl1;
             this.FullName.TabIndex = 4;
             this.FullName.Enter += new System.EventHandler(this.FullName_Enter);
@@ -284,7 +285,7 @@ namespace Benjsoft.Gcash
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(378, 30);
             this.layoutControlItem1.Text = "Name";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(114, 20);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(112, 20);
             // 
             // emptySpaceItem1
             // 
@@ -301,7 +302,7 @@ namespace Benjsoft.Gcash
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(749, 31);
             this.layoutControlItem3.Text = "Remarks";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(114, 20);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(112, 20);
             // 
             // layoutControlItem4
             // 
@@ -310,7 +311,7 @@ namespace Benjsoft.Gcash
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(371, 30);
             this.layoutControlItem4.Text = "*Mobile Number";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(114, 20);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(112, 20);
             // 
             // layoutControlItem6
             // 
@@ -319,7 +320,7 @@ namespace Benjsoft.Gcash
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(371, 30);
             this.layoutControlItem6.Text = "*Type";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(114, 20);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(112, 20);
             // 
             // layoutControlItem7
             // 
@@ -337,7 +338,7 @@ namespace Benjsoft.Gcash
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(378, 30);
             this.layoutControlItem2.Text = "Transaction Date";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(114, 20);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(112, 20);
             // 
             // layoutControlItem9
             // 
@@ -364,7 +365,7 @@ namespace Benjsoft.Gcash
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(347, 30);
             this.layoutControlItem5.Text = "*Amount";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(114, 20);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(112, 20);
             // 
             // layoutControlItem8
             // 
@@ -373,7 +374,7 @@ namespace Benjsoft.Gcash
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.Size = new System.Drawing.Size(259, 30);
             this.layoutControlItem8.Text = "Charge/Fee";
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(114, 20);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(112, 20);
             // 
             // panelControl2
             // 

@@ -701,10 +701,6 @@
       </summary>
       <value>The object’s name used by accessibility client applications.</value>
     </member>
-    <member name="P:DevExpress.XtraTreeList.Columns.TreeListBand.AccessibleRole">
-      <summary />
-      <value></value>
-    </member>
     <member name="P:DevExpress.XtraTreeList.Columns.TreeListBand.ActualVisible">
       <summary>
         <para>Specifies whether the band and all its parents are visible.</para>
@@ -1073,10 +1069,6 @@
         <para>Gets or sets the object’s name used by accessibility client applications.</para>
       </summary>
       <value>The object’s name used by accessibility client applications.</value>
-    </member>
-    <member name="P:DevExpress.XtraTreeList.Columns.TreeListColumn.AccessibleRole">
-      <summary />
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.Columns.TreeListColumn.ActualMaxWidth">
       <summary>
@@ -3096,7 +3088,7 @@
     </member>
     <member name="F:DevExpress.XtraTreeList.FilterMode.Matches">
       <summary>
-        <para>Shows only those nodes that match the filter. If a node is collapsed, its children are hidden even if they match the current filter. Enable the <see cref="P:DevExpress.XtraTreeList.TreeListOptionsFilter.ExpandNodesOnFiltering"/> option to automatically expand collapsed nodes before filtration.</para>
+        <para>Shows only those nodes that match the filter.</para>
         <para></para>
       </summary>
     </member>
@@ -6013,7 +6005,7 @@
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CustomRowFilter">
       <summary>
-        <para>Allows you to specify the node visibility, regardless of the applied filter.</para>
+        <para>Allows you to specify the node visibility, regardless of the currently applied filter.</para>
       </summary>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CustomScrollAnnotation">
@@ -7016,11 +7008,6 @@
       </summary>
       <value>An image collection (DevExpress.Utils.ImageCollection or DevExpress.Utils.SvgImageCollection).</value>
     </member>
-    <member name="E:DevExpress.XtraTreeList.TreeList.HyperlinkClick">
-      <summary>
-        <para>Fires when a hyperlink in a column or band header is activated.</para>
-      </summary>
-    </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.ImageIndexFieldName">
       <summary>
         <para>Gets or sets the name of the field whose values represent select image indexes for corresponding nodes.</para>
@@ -7448,7 +7435,7 @@
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.OptionsClipboard">
       <summary>
-        <para>Provides access to the options that control row copy and paste operations.</para>
+        <para>Provides access to the options that control copying to the clipboard.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraTreeList.TreeListOptionsClipboard"/> object that provides access to the clipboard options.</value>
     </member>
@@ -8305,10 +8292,6 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to s
       <summary>
         <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.</para>
       </summary>
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraTreeList.TreeList.UseAdvancedCustomizationForm">
-      <summary />
       <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.UseDirectXPaint">
@@ -9249,12 +9232,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       </summary>
       <value>true to expand the collapsed node if it matches the search criteria; otherwise, false.</value>
     </member>
-    <member name="P:DevExpress.XtraTreeList.TreeListOptionsBehavior.HyperlinkClickMode">
-      <summary>
-        <para>Gets or sets whether and how hyperlinks in column and band headers are activated.</para>
-      </summary>
-      <value>A value that specifies whether and how hyperlinks in column and band headers are activated.</value>
-    </member>
     <member name="P:DevExpress.XtraTreeList.TreeListOptionsBehavior.ImmediateEditor">
       <summary>
         <para>Gets or sets whether an in-place editor is automatically activated when a cell is clicked.</para>
@@ -9373,10 +9350,8 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       </summary>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeListOptionsCustomization.AdvancedCustomizationFormSortMode">
-      <summary>
-        <para>Gets or sets whether and how column/band headers are sorted within the advanced Customization Form.</para>
-      </summary>
-      <value>A value that specifies whether and how column/band headers are sorted in the advanced Customization Form.</value>
+      <summary />
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeListOptionsCustomization.AllowBandMoving">
       <summary>
@@ -9457,10 +9432,8 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       <value>true if hidden bands are displayed in the Customization Form; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeListOptionsCustomization.UseAdvancedCustomizationForm">
-      <summary>
-        <para>Gets or sets whether to use the advanced Customization Form.</para>
-      </summary>
-      <value>True, to use the advanced Customization Form; Default or False, to use the default Customization Form.</value>
+      <summary />
+      <value></value>
     </member>
     <member name="T:DevExpress.XtraTreeList.TreeListOptionsDragAndDrop">
       <summary>

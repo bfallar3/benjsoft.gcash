@@ -4574,9 +4574,9 @@ is dependent on the type of control embedded in this layout item.</value>
     </member>
     <member name="P:DevExpress.XtraLayout.OptionsItemTextGroup.TextToControlDistance">
       <summary>
-        <para>Gets or sets the distance between text regions and controls for the current group’s layout items.</para>
+        <para>Gets or sets the distance between the text regions of layout items and the corresponding controls.</para>
       </summary>
-      <value>The distance between text regions and controls in the current group.</value>
+      <value>An integer value that represents the distance between the text regions of layout items and  the corresponding controls.</value>
     </member>
     <member name="M:DevExpress.XtraLayout.OptionsItemTextGroup.ToString">
       <summary />

@@ -1687,9 +1687,6 @@
         <para>Resets the <see cref="P:DevExpress.XtraEditors.BaseEdit.ForeColor"/> property back to its default value.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.XtraEditors.BaseEdit.ResetSelection">
-      <summary />
-    </member>
     <member name="M:DevExpress.XtraEditors.BaseEdit.SelectAll">
       <summary>
         <para>Selects the editor’s entire content.</para>
@@ -10303,68 +10300,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.False.</value>
         <para></para>
       </summary>
     </member>
-    <member name="N:DevExpress.XtraEditors.Controls.StepProgressBar">
-      <summary />
-    </member>
-    <member name="T:DevExpress.XtraEditors.Controls.StepProgressBar.ProgressMode">
-      <summary>
-        <para>Contains values that specify the progress styles of items</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraEditors.Controls.StepProgressBar.ProgressMode.Default">
-      <summary>
-        <para>The same as Range mode.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraEditors.Controls.StepProgressBar.ProgressMode.Range">
-      <summary>
-        <para>Highlights the selected item (SelectedItem), the previous items and the connectors between them.</para>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraEditors.Controls.StepProgressBar.ProgressMode.SingleStep">
-      <summary>
-        <para>Highlights the selected item (SelectedItem) only.</para>
-        <para></para>
-      </summary>
-    </member>
-    <member name="T:DevExpress.XtraEditors.Controls.StepProgressBar.ScrollMode">
-      <summary>
-        <para>Contains values that specify the scrollbar’s styles.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraEditors.Controls.StepProgressBar.ScrollMode.Auto">
-      <summary>
-        <para>The application’s default scrollbar. The scrollbar is visible if the items don’t fit inside the step progress bar.</para>
-        <para>Use the ScrollUIMode property to change the application’s scroll bar style.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraEditors.Controls.StepProgressBar.ScrollMode.Default">
-      <summary>
-        <para>The same as Fluent scroll mode.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraEditors.Controls.StepProgressBar.ScrollMode.Fluent">
-      <summary>
-        <para>The Fluent Design-inspired scroll bar.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraEditors.Controls.StepProgressBar.ScrollMode.Hidden">
-      <summary>
-        <para>Hides the scrollbar.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraEditors.Controls.StepProgressBar.ScrollMode.Touch">
-      <summary>
-        <para>This member is not supported.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraEditors.Controls.StepProgressBar.ScrollMode.Visible">
-      <summary>
-        <para>The application’s default scrollbar. The scrollbar is always visible.</para>
-        <para>Use the ScrollUIMode property to change the application’s scroll bar style.</para>
-      </summary>
-    </member>
     <member name="T:DevExpress.XtraEditors.Controls.StringId">
       <summary>
         <para>Contains values corresponding to strings that can be localized.</para>
@@ -15415,7 +15350,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.False.</value>
     </member>
     <member name="E:DevExpress.XtraEditors.FilterControl.BeforeShowValueEditor">
       <summary>
-        <para>Fires before the Filter Control displays editors for operands.</para>
+        <para>Fires before displaying an editor used to edit operands in the FilterControl.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.FilterControl.ClearFilter">
@@ -15442,16 +15377,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.False.</value>
     <member name="E:DevExpress.XtraEditors.FilterControl.CreateCustomRepositoryItem">
       <summary>
         <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.</para>
-      </summary>
-    </member>
-    <member name="E:DevExpress.XtraEditors.FilterControl.CustomValueEditor">
-      <summary>
-        <para>Allows you to assign a custom editor used to display and edit an operand.</para>
-      </summary>
-    </member>
-    <member name="E:DevExpress.XtraEditors.FilterControl.CustomValueEditorForEditing">
-      <summary>
-        <para>Allows you to specify a custom editor used to edit an operand. Handle the <see cref="E:DevExpress.XtraEditors.FilterControl.CustomValueEditor"/> event to specify an editor used to display and edit the operand.</para>
       </summary>
     </member>
     <member name="E:DevExpress.XtraEditors.FilterControl.DisposeValueEditor">
@@ -15677,11 +15602,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.False.</value>
       </summary>
       <value>true if a menu is used to select operands and operators in a <see cref="T:DevExpress.XtraEditors.FilterControl"/>; false if a combobox editor is used.</value>
     </member>
-    <member name="E:DevExpress.XtraEditors.FilterControl.ValueEditorShown">
-      <summary>
-        <para>Fires after an operand’s editor has been displayed.</para>
-      </summary>
-    </member>
     <member name="T:DevExpress.XtraEditors.FilterEditorViewMode">
       <summary>
         <para>Contains values that specify how a Filter Editor Control’s criteria can be edited.</para>
@@ -15747,38 +15667,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.False.</value>
         <para>Gets or sets whether to display the Filter Editor (the form that embeds the Filter Editor).</para>
       </summary>
       <value>true, to display the Filter Editor; otherwise, false.</value>
-    </member>
-    <member name="T:DevExpress.XtraEditors.Filtering.CustomValueEditorArgs">
-      <summary />
-    </member>
-    <member name="M:DevExpress.XtraEditors.Filtering.CustomValueEditorArgs.#ctor(DevExpress.XtraEditors.Filtering.ClauseNode,System.Object,System.Int32,DevExpress.XtraEditors.Repository.RepositoryItem)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraEditors.Filtering.CustomValueEditorArgs"/> class with specified settings.</para>
-      </summary>
-      <param name="node"></param>
-      <param name="value"></param>
-      <param name="elementIndex"></param>
-      <param name="repositoryItem"></param>
-    </member>
-    <member name="P:DevExpress.XtraEditors.Filtering.CustomValueEditorArgs.ElementIndex">
-      <summary />
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraEditors.Filtering.CustomValueEditorArgs.Node">
-      <summary />
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraEditors.Filtering.CustomValueEditorArgs.Operation">
-      <summary />
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraEditors.Filtering.CustomValueEditorArgs.RepositoryItem">
-      <summary />
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraEditors.Filtering.CustomValueEditorArgs.Value">
-      <summary />
-      <value></value>
     </member>
     <member name="T:DevExpress.XtraEditors.Filtering.ExcelFilteringDataEventArgs">
       <summary>
@@ -16101,10 +15989,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.False.</value>
         <para>Allows you to specify a custom editor to be opened instead of the default one, specified by the Editor property.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItem"/> descendant identifying the custom editor that will be created and displayed instead of the default one.</value>
-    </member>
-    <member name="P:DevExpress.XtraEditors.Filtering.ShowValueEditorEventArgs.Editor">
-      <summary />
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraEditors.Filtering.ShowValueEditorEventArgs.FocusedElementIndex">
       <summary>
@@ -17512,17 +17396,13 @@ The FormatConditionAutomaticType.Default value is equivalent to FormatConditionA
     </member>
     <member name="T:DevExpress.XtraEditors.HtmlContentControl">
       <summary>
-        <para>Renders a UI from HTML-CSS markup. Can show data from a bound data context (a business object or data source item). (CTP)</para>
+        <para>Renders a UI from an HTML+CSS markup. Can show data from a bound data context (a business object or data source item).</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.HtmlContentControl.#ctor">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraEditors.HtmlContentControl"/> class.</para>
       </summary>
-    </member>
-    <member name="P:DevExpress.XtraEditors.HtmlContentControl.AllowFocus">
-      <summary />
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraEditors.HtmlContentControl.Appearance">
       <summary />
@@ -17649,7 +17529,7 @@ The FormatConditionAutomaticType.Default value is equivalent to FormatConditionA
     </member>
     <member name="T:DevExpress.XtraEditors.HtmlContentPopup">
       <summary>
-        <para>Allows you to show a popup window with a UI rendered from an HTML-CSS template. Can show data from a bound data context (a business object or data source item). (CTP)</para>
+        <para>Allows you to show a popup window with a UI rendered from an HTML+CSS template. Can show data from a bound data context (a business object or data source item).</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.HtmlContentPopup.#ctor">
@@ -17720,15 +17600,6 @@ The FormatConditionAutomaticType.Default value is equivalent to FormatConditionA
     <member name="P:DevExpress.XtraEditors.HtmlContentPopup.ContainerControl">
       <summary />
       <value></value>
-    </member>
-    <member name="T:DevExpress.XtraEditors.HtmlContentPopup.ContentWindowHtmlContext">
-      <summary />
-    </member>
-    <member name="M:DevExpress.XtraEditors.HtmlContentPopup.ContentWindowHtmlContext.#ctor(DevExpress.XtraEditors.HtmlContentPopup.HtmlContentWindow)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraEditors.HtmlContentPopup.ContentWindowHtmlContext"/> class with specified settings.</para>
-      </summary>
-      <param name="window"></param>
     </member>
     <member name="M:DevExpress.XtraEditors.HtmlContentPopup.CreateWindowService(System.Windows.Forms.IWin32Window)">
       <summary />
@@ -26026,9 +25897,9 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit.SortColumnIndex">
       <summary>
-        <para>Gets or sets the column index against which data is sorted.</para>
+        <para>Gets or sets the visible column index against which data is sorted.</para>
       </summary>
-      <value>The zero-based column index against which data is sorted.</value>
+      <value>The zero-based visible column index against which data is sorted.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit.TextEditStyle">
       <summary />
@@ -26736,12 +26607,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       </summary>
       <value>The Open File dialog’s custom filter. If this property is set to an empty string, the dialog uses a default filter.</value>
     </member>
-    <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit.OpenFileDialogFilterIndex">
-      <summary>
-        <para>Gets or sets the index of the filter currently selected in the Open File Dialog. See this property description for more information: <see cref="P:System.Windows.Forms.FileDialog.FilterIndex"/>.</para>
-      </summary>
-      <value></value>
-    </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit.OptionsEditDialog">
       <summary>
         <para>Contains settings that customize the Image Editor dialog.</para>
@@ -26794,12 +26659,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
         <para>Gets or sets a custom filter for the Save File dialog.</para>
       </summary>
       <value>The Save File dialog’s custom filter. If this property is set to an empty string, the dialog uses a default filter.</value>
-    </member>
-    <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit.SaveFileDialogFilterIndex">
-      <summary>
-        <para>Gets or sets the index of the filter currently selected in the Save File Dialog. See this property description for more information: <see cref="P:System.Windows.Forms.FileDialog.FilterIndex"/>.</para>
-      </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit.ShowCameraMenuItem">
       <summary>
@@ -28187,9 +28046,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     <member name="E:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.CustomizeAutoCompleteSource">
       <summary />
     </member>
-    <member name="E:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.CustomTextLineHeight">
-      <summary />
-    </member>
     <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.EditMaskSettings(System.Object)">
       <summary>
         <para>Shows the Mask Editor dialog at runtime. Users can utilize this dialog to apply standard or custom masks to this editor.</para>
@@ -28214,14 +28070,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
         <para>Gets the corresponding editor’s type name.</para>
       </summary>
       <value>The ‘TextEdit‘ string always.</value>
-    </member>
-    <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.EnableCustomMaskTextInput(System.Action{DevExpress.Data.Mask.CustomTextMaskInputArgs},System.Object)">
-      <summary />
-      <param name="onTextInput"></param>
-      <param name="tag"></param>
-    </member>
-    <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.EnableNonMaskedInput">
-      <summary />
     </member>
     <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.GetBrick(DevExpress.XtraEditors.PrintCellHelperInfo)">
       <summary>
@@ -30083,19 +29931,13 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
       <value>The alignment position.</value>
     </member>
     <member name="E:DevExpress.XtraEditors.StepProgressBar.CustomDrawConnector">
-      <summary>
-        <para>Allows you to custom draw an item’s connector.</para>
-      </summary>
+      <summary />
     </member>
     <member name="E:DevExpress.XtraEditors.StepProgressBar.CustomDrawItemContentBlock">
-      <summary>
-        <para>Allows you to custom draw an item’s content blocks.</para>
-      </summary>
+      <summary />
     </member>
     <member name="E:DevExpress.XtraEditors.StepProgressBar.CustomDrawItemIndicator">
-      <summary>
-        <para>Allows you to custom draw indicators.</para>
-      </summary>
+      <summary />
     </member>
     <member name="P:DevExpress.XtraEditors.StepProgressBar.DistanceBetweenContentBlockElements">
       <summary>
@@ -30171,9 +30013,7 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
       <value>true if the control is flipped; otherwise, false.</value>
     </member>
     <member name="E:DevExpress.XtraEditors.StepProgressBar.ItemHyperlinkClick">
-      <summary>
-        <para>Occurs when users click on the step progress bar item’s hyperlink.</para>
-      </summary>
+      <summary />
     </member>
     <member name="P:DevExpress.XtraEditors.StepProgressBar.ItemOptions">
       <summary>
@@ -30182,9 +30022,7 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
       <value></value>
     </member>
     <member name="E:DevExpress.XtraEditors.StepProgressBar.ItemProgressChanged">
-      <summary>
-        <para>Occurs when an item’s Progress property is changed.</para>
-      </summary>
+      <summary />
     </member>
     <member name="P:DevExpress.XtraEditors.StepProgressBar.Items">
       <summary>
@@ -30216,14 +30054,12 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.StepProgressBar.ProgressMode">
-      <summary>
-        <para>Indicates the progress style of items.</para>
-      </summary>
+      <summary />
       <value></value>
     </member>
     <member name="P:DevExpress.XtraEditors.StepProgressBar.ScrollMode">
       <summary>
-        <para>Gets or sets the scrollbar style.</para>
+        <para>Gets or ses the scrollbar style. Step Progress Bar displays a scroll bar when its <see cref="P:DevExpress.XtraEditors.StepProgressBar.LayoutMode"/> equals Fixed and there is not enough space to display all of the control items.</para>
       </summary>
       <value>The scrollbar style.</value>
     </member>
@@ -30320,15 +30156,9 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
       </summary>
       <value>Provides access to properties that allow you to set up raster or vector images.</value>
     </member>
-    <member name="P:DevExpress.XtraEditors.StepProgressBarIndicatorOptions.AutoCropImage">
+    <member name="P:DevExpress.XtraEditors.StepProgressBarIndicatorOptions.AutoFitImage">
       <summary />
       <value></value>
-    </member>
-    <member name="P:DevExpress.XtraEditors.StepProgressBarIndicatorOptions.AutoFitImage">
-      <summary>
-        <para>Gets or sets whether transparent pixels around the indicator’s image are trimmed.</para>
-      </summary>
-      <value>True or Default if the transparent pixels around the image are trimmed; otherwise, False.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.StepProgressBarIndicatorOptions.InactiveStateDrawMode">
       <summary>
@@ -30383,16 +30213,12 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
       <value>The item’s second content block.</value>
     </member>
     <member name="M:DevExpress.XtraEditors.StepProgressBarItem.GetNextItem">
-      <summary>
-        <para>Returns the next item.</para>
-      </summary>
-      <returns>The next item. null if the current item is the last item.</returns>
+      <summary />
+      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraEditors.StepProgressBarItem.GetPreviousItem">
-      <summary>
-        <para>Returns the previous item.</para>
-      </summary>
-      <returns>The previous item. null if the current item is the first item.</returns>
+      <summary />
+      <returns></returns>
     </member>
     <member name="P:DevExpress.XtraEditors.StepProgressBarItem.IsActive">
       <summary>
@@ -30401,16 +30227,12 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
       <value>true if the item is active (selected); otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.StepProgressBarItem.IsFirstItem">
-      <summary>
-        <para>Indicates whether the item is the first item in the step progress bar items collection.</para>
-      </summary>
-      <value>true if the item is the first item in the step progress bar items collection; otherwise, false.</value>
+      <summary />
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraEditors.StepProgressBarItem.IsLastItem">
-      <summary>
-        <para>Indicates whether the item is the last item in the step progress bar items collection.</para>
-      </summary>
-      <value>true if the item is the last item in the step progress bar items collection; otherwise, false.</value>
+      <summary />
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraEditors.StepProgressBarItem.Name">
       <summary>
@@ -30431,9 +30253,7 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
       <value>The progress towards this item. A value between 0 and 100.</value>
     </member>
     <member name="E:DevExpress.XtraEditors.StepProgressBarItem.ProgressChanged">
-      <summary>
-        <para>Occurs when a specific item’s Progress property is changed.</para>
-      </summary>
+      <summary />
     </member>
     <member name="P:DevExpress.XtraEditors.StepProgressBarItem.State">
       <summary>
@@ -30447,10 +30267,8 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.StepProgressBarItem.Tag">
-      <summary>
-        <para>Gets or sets a custom object associated with the current item.</para>
-      </summary>
-      <value>The custom object associated with the item.</value>
+      <summary />
+      <value></value>
     </member>
     <member name="T:DevExpress.XtraEditors.StepProgressBarItemContentBlock">
       <summary>
@@ -30500,50 +30318,13 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
     </member>
     <member name="P:DevExpress.XtraEditors.StepProgressBarItemContentBlock.IsEmpty">
       <summary>
-        <para>Returns whether this content block has no content.</para>
+        <para>Returns whether this content block nas no content.</para>
       </summary>
       <value>true if this block does not have a caption, description, or image; otherwise, false.</value>
     </member>
     <member name="M:DevExpress.XtraEditors.StepProgressBarItemContentBlock.ToString">
       <summary />
       <returns></returns>
-    </member>
-    <member name="T:DevExpress.XtraEditors.StepProgressBarItemHyperlinkClickEventArgs">
-      <summary>
-        <para>Provides data for the <see cref="E:DevExpress.XtraEditors.StepProgressBar.ItemHyperlinkClick"/> event.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraEditors.StepProgressBarItemHyperlinkClickEventArgs.#ctor(DevExpress.XtraEditors.ViewInfo.StepProgressBarHitInfo,DevExpress.Utils.Text.Internal.StringBlock,System.Windows.Forms.MouseEventArgs)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraEditors.StepProgressBarItemHyperlinkClickEventArgs"/> class with specified settings.</para>
-      </summary>
-      <param name="hitInfo"></param>
-      <param name="stringBlock"></param>
-      <param name="mouseArgs"></param>
-    </member>
-    <member name="P:DevExpress.XtraEditors.StepProgressBarItemHyperlinkClickEventArgs.IsCaption">
-      <summary>
-        <para>Gets if the hyperlink is displayed in the content block’s caption (Caption).</para>
-      </summary>
-      <value>true if the hyperlink is displayed in the content block’s caption (Caption); otherwise, false.</value>
-    </member>
-    <member name="P:DevExpress.XtraEditors.StepProgressBarItemHyperlinkClickEventArgs.IsDescription">
-      <summary>
-        <para>Gets if the hyperlink is displayed in the content block’s description (Description).</para>
-      </summary>
-      <value>true if the hyperlink is displayed in the content block’s description (Description); otherwise, false.</value>
-    </member>
-    <member name="P:DevExpress.XtraEditors.StepProgressBarItemHyperlinkClickEventArgs.Item">
-      <summary>
-        <para>Specifies the item that contains the hyperlink.</para>
-      </summary>
-      <value>Returns the item that contains the hyperlink.</value>
-    </member>
-    <member name="P:DevExpress.XtraEditors.StepProgressBarItemHyperlinkClickEventArgs.ItemContentBlock">
-      <summary>
-        <para>Gets the clicked hyperlink’s content block.</para>
-      </summary>
-      <value>The clicked hyperlink’s content block.</value>
     </member>
     <member name="T:DevExpress.XtraEditors.StepProgressBarItemOptions">
       <summary>
@@ -30980,12 +30761,6 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
         <para>Allows you to highlight or custom paint strings within the control’s text. This event is supported in Advanced mode (see <see cref="P:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.UseAdvancedMode"/>).</para>
       </summary>
     </member>
-    <member name="E:DevExpress.XtraEditors.TextEdit.CustomizeAutoCompleteSource">
-      <summary />
-    </member>
-    <member name="E:DevExpress.XtraEditors.TextEdit.CustomTextLineHeight">
-      <summary />
-    </member>
     <member name="M:DevExpress.XtraEditors.TextEdit.Cut">
       <summary>
         <para>Moves the current selection in the text box to the Clipboard.</para>
@@ -31135,9 +30910,6 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
       <summary>
         <para>Resets selection and caret position in the editor.</para>
       </summary>
-    </member>
-    <member name="M:DevExpress.XtraEditors.TextEdit.ResetSelection">
-      <summary />
     </member>
     <member name="M:DevExpress.XtraEditors.TextEdit.ScrollToCaret">
       <summary>
@@ -31296,24 +31068,6 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
       </summary>
       <value>Specifies whether the editor uses the DirectX or traditional GDI renderer.</value>
     </member>
-    <member name="T:DevExpress.XtraEditors.TextEditAutoCompleteMode">
-      <summary />
-    </member>
-    <member name="F:DevExpress.XtraEditors.TextEditAutoCompleteMode.Append">
-      <summary />
-    </member>
-    <member name="F:DevExpress.XtraEditors.TextEditAutoCompleteMode.None">
-      <summary />
-    </member>
-    <member name="F:DevExpress.XtraEditors.TextEditAutoCompleteMode.Suggest">
-      <summary />
-    </member>
-    <member name="F:DevExpress.XtraEditors.TextEditAutoCompleteMode.SuggestAppend">
-      <summary />
-    </member>
-    <member name="F:DevExpress.XtraEditors.TextEditAutoCompleteMode.SuggestSingleWord">
-      <summary />
-    </member>
     <member name="T:DevExpress.XtraEditors.TextEditCustomHighlightTextEventArgs">
       <summary>
         <para>Contains data for the <see cref="E:DevExpress.XtraEditors.TextEdit.CustomHighlightText"/> and <see cref="E:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.CustomHighlightText"/> events.</para>
@@ -31420,44 +31174,6 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
         <para>Gets the position of the currently processed text line within the editor’s text.</para>
       </summary>
       <value>A zero-based index of the currently processed text line within the editor’s text.</value>
-    </member>
-    <member name="T:DevExpress.XtraEditors.TextEditCustomizeAutoCompleteSourceEventArgs">
-      <summary>
-        <para>Provides data for the <see cref="E:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.CustomizeAutoCompleteSource"/> event.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraEditors.TextEditCustomizeAutoCompleteSourceEventArgs.#ctor(System.Int32,System.Int32,System.String,System.String)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraEditors.TextEditCustomizeAutoCompleteSourceEventArgs"/> class with specified settings.</para>
-      </summary>
-      <param name="lineIndex"></param>
-      <param name="charIndex"></param>
-      <param name="lineText"></param>
-      <param name="editingWord"></param>
-    </member>
-    <member name="P:DevExpress.XtraEditors.TextEditCustomizeAutoCompleteSourceEventArgs.CharIndex">
-      <summary />
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraEditors.TextEditCustomizeAutoCompleteSourceEventArgs.CustomSource">
-      <summary />
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraEditors.TextEditCustomizeAutoCompleteSourceEventArgs.EditingWord">
-      <summary />
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraEditors.TextEditCustomizeAutoCompleteSourceEventArgs.Handled">
-      <summary />
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraEditors.TextEditCustomizeAutoCompleteSourceEventArgs.LineIndex">
-      <summary />
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraEditors.TextEditCustomizeAutoCompleteSourceEventArgs.LineText">
-      <summary />
-      <value></value>
     </member>
     <member name="T:DevExpress.XtraEditors.TileControl">
       <summary>
@@ -36496,7 +36212,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraSplashScreen.OverlayWindowOptions"/> class.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.XtraSplashScreen.OverlayWindowOptions.#ctor(System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Drawing.Color},System.Nullable{System.Drawing.Color},System.Nullable{System.Double},System.Drawing.Image,DevExpress.XtraSplashScreen.IOverlayWindowPainter,System.String,System.Nullable{DevExpress.XtraSplashScreen.ImageRotationParams},System.Nullable{System.Int32},System.Nullable{System.Drawing.Size},System.Nullable{DevExpress.XtraSplashScreen.WaitAnimationType},System.Nullable{DevExpress.XtraSplashScreen.LineAnimationParams},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean})">
+    <member name="M:DevExpress.XtraSplashScreen.OverlayWindowOptions.#ctor(System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Drawing.Color},System.Nullable{System.Drawing.Color},System.Nullable{System.Double},System.Drawing.Image,DevExpress.XtraSplashScreen.IOverlayWindowPainter,System.String,System.Nullable{DevExpress.XtraSplashScreen.ImageRotationParams},System.Nullable{System.Int32},System.Nullable{System.Drawing.Size},System.Nullable{DevExpress.XtraSplashScreen.WaitAnimationType},System.Nullable{DevExpress.XtraSplashScreen.LineAnimationParams},System.Nullable{System.Boolean},System.Nullable{System.Boolean})">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraSplashScreen.OverlayWindowOptions"/> class with specified settings.</para>
       </summary>
@@ -36515,7 +36231,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       <param name="lineAnimationParameters"></param>
       <param name="useDirectX"></param>
       <param name="disableInput"></param>
-      <param name="trackOwnerBounds"></param>
     </member>
     <member name="P:DevExpress.XtraSplashScreen.OverlayWindowOptions.AnimationType">
       <summary>
@@ -36606,10 +36321,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
         <para>Gets or sets the delay before the form is shown.</para>
       </summary>
       <value>The delay before the form is shown.</value>
-    </member>
-    <member name="P:DevExpress.XtraSplashScreen.OverlayWindowOptions.TrackOwnerBounds">
-      <summary />
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraSplashScreen.OverlayWindowOptions.UseDirectX">
       <summary>
@@ -37797,7 +37508,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       <param name="options">An OverlayWindowOptions object that specifies the Overlay Form options, such as the loading image, fade animation and colors.</param>
       <returns>A handle for the shown Overlay Form. Use this handle to close the Overlay Form.</returns>
     </member>
-    <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowOverlayForm(System.Windows.Forms.Control,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Drawing.Color},System.Nullable{System.Drawing.Color},System.Nullable{System.Int32},System.Drawing.Image,DevExpress.XtraSplashScreen.IOverlayWindowPainter,System.String,System.Nullable{DevExpress.XtraSplashScreen.ImageRotationParams},System.Nullable{System.Int32},System.Nullable{System.Drawing.Size},System.Nullable{DevExpress.XtraSplashScreen.WaitAnimationType},System.Nullable{DevExpress.XtraSplashScreen.LineAnimationParams},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean})">
+    <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowOverlayForm(System.Windows.Forms.Control,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Drawing.Color},System.Nullable{System.Drawing.Color},System.Nullable{System.Int32},System.Drawing.Image,DevExpress.XtraSplashScreen.IOverlayWindowPainter,System.String,System.Nullable{DevExpress.XtraSplashScreen.ImageRotationParams},System.Nullable{System.Int32},System.Nullable{System.Drawing.Size},System.Nullable{DevExpress.XtraSplashScreen.WaitAnimationType},System.Nullable{DevExpress.XtraSplashScreen.LineAnimationParams},System.Nullable{System.Boolean},System.Nullable{System.Boolean})">
       <summary />
       <param name="owner"></param>
       <param name="fadeIn"></param>
@@ -37815,7 +37526,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       <param name="lineAnimationParameters"></param>
       <param name="useDirectX"></param>
       <param name="disableInput"></param>
-      <param name="trackOwnerBounds"></param>
       <returns></returns>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowSkinSplashScreen(DevExpress.Utils.Svg.SvgImage,System.Nullable{System.Drawing.Size},System.String,System.String,System.String,System.String,System.Windows.Forms.Form,System.Boolean,System.Boolean,System.Boolean,DevExpress.XtraSplashScreen.SplashFormStartPosition,System.Drawing.Point)">
