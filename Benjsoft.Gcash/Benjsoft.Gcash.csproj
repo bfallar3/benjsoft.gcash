@@ -87,6 +87,7 @@
       <DependentUpon>DailyReport.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO.cs" />
+    <Compile Include="FeeService.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

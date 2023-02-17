@@ -131,22 +131,9 @@ namespace Benjsoft.Gcash
             }
         }
        
-        private int CalculateFee(double amount, TransTypeEnum type)
+        private double CalculateFee(double amount, TransTypeEnum type)
         {
-            int baseAmount = 1000;
-            int multipler = 10;
-            if (type == TransTypeEnum.CashIn)
-            {
-                var fee = Math.Ceiling((amount / baseAmount)) * multipler;
-                return (int)fee;
-            }
-            else if (type == TransTypeEnum.CashOut)
-            {
-                multipler = 20;
-                var fee = Math.Ceiling((amount / baseAmount)) * multipler;
-                return (int)fee;
-            }
-            return 0;
+            return FeeService.GetCharge(amount);
         }
 
         private void ChargeOrFee_Enter(object sender, EventArgs e)
