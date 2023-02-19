@@ -6,22 +6,19 @@ namespace Benjsoft.Gcash
     public class FeeService
     {
         private static List<FeeCharge> _fees;
+        private static Repository _repository = new Repository();
 
         static FeeService()
         {
-            double start = 1.00;
-            double end = 500.00;
-            double charge = 10;
-            double increment = 500;
-
             _fees = new List<FeeCharge>();
-            for(int i=0; i<20; i++)
+            var feeCharges = _repository.GetFeeCharges();
+            foreach (var charge in feeCharges)
             {
-                _fees.Add(new FeeCharge(start, end, charge));
-                start += increment;
-                end += increment;
-
-                charge += 10;
+                FeeCharge feeCharge = new FeeCharge();
+                feeCharge.Minumum = charge.Minumum;
+                feeCharge.Maximum = charge.Maximum;
+                feeCharge.Fee = charge.Fee;
+                _fees.Add(feeCharge);
             }
         }
 
@@ -29,22 +26,8 @@ namespace Benjsoft.Gcash
         {
             var charge = _fees.FirstOrDefault(f => amount >= f.Minumum && amount <= f.Maximum);
             if (charge != null)
-                return charge.Charge;
+                return charge.Fee;
             return 0.00;
         }
-    }
-
-    internal class FeeCharge
-    {
-        public FeeCharge(double minumum, double maximum, double fee)
-        {
-            Minumum = minumum;
-            Maximum = maximum;
-            this.Charge = fee;
-        }
-
-        public double Minumum { get; set; }
-        public double Maximum { get; set; }
-        public double Charge { get; set; }
     }
 }

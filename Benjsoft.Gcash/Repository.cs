@@ -17,6 +17,16 @@ namespace Benjsoft.Gcash
             }
         }
 
+        public IEnumerable<FeeCharge> GetFeeCharges()
+        {
+            using(var cn = DAO.LiteDbConnection())
+            {
+                cn.Open();
+                string query = @"SELECT * FROM [Charge]";
+                return cn.Query<FeeCharge>(query);
+            }
+        }
+
         public long CountTransactions()
         {
             using (var cn = DAO.LiteDbConnection())
